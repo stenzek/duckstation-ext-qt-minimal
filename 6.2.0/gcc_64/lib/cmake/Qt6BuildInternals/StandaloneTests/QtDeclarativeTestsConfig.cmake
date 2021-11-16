@@ -1,0 +1,2 @@
+find_package(Qt6 6.2.0
+             REQUIRED COMPONENTS Qml QmlModels QmlCore QmlWorkerScript QmlLocalStorage QmlXmlListModel Quick QuickShapesPrivate QuickLayouts QuickTest QuickParticlesPrivate QuickWidgets QuickTemplates2 QuickControls2Impl QuickControls2 QuickDialogs2Utils QuickDialogs2QuickImpl QuickDialogs2 LabsSettings LabsQmlModels LabsFolderListModel LabsAnimation LabsWavefrontMesh LabsSharedImage PacketProtocolPrivate QmlDevToolsPrivate QmlDomPrivate QmlCompilerPrivate QmlDebugPrivate)

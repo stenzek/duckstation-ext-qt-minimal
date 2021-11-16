@@ -1,0 +1,14 @@
+QT.waylandcompositor_private.VERSION = 6.2.0
+QT.waylandcompositor_private.name = QtWaylandCompositor
+QT.waylandcompositor_private.module =
+QT.waylandcompositor_private.libs = $$QT_MODULE_LIB_BASE
+QT.waylandcompositor_private.includes = $$QT_MODULE_INCLUDE_BASE/QtWaylandCompositor/6.2.0 $$QT_MODULE_INCLUDE_BASE/QtWaylandCompositor/6.2.0/QtWaylandCompositor
+QT.waylandcompositor_private.frameworks = 
+QT.waylandcompositor_private.depends = core_private gui_private waylandcompositor qml_private quick_private
+QT.waylandcompositor_private.uses = 
+QT.waylandcompositor_private.module_config = v2 internal_module
+QT.waylandcompositor_private.enabled_features = wayland-server wayland-datadevice wayland-egl xcomposite-egl xcomposite-glx wayland-vulkan-server-buffer wayland-shm-emulation-server-buffer
+QT.waylandcompositor_private.disabled_features = wayland-brcm wayland-drm-egl-server-buffer wayland-libhybris-egl-server-buffer wayland-dmabuf-server-buffer wayland-dmabuf-client-buffer wayland-layer-integration-vsp2
+QMAKE_LIBS_WAYLAND_SERVER = -lwayland-server
+QMAKE_LIBS_WAYLAND_EGL = -lwayland-egl
+QMAKE_LIBS_XCOMPOSITE = -lXcomposite
