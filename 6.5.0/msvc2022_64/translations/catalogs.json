@@ -1,0 +1,6 @@
+[
+  {
+    "name": "qtbase",
+    "repositories": ["qtbase", "qtactiveqt", "qtimageformats"]
+  }
+]
