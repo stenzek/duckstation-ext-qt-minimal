@@ -1,0 +1,11 @@
+{
+    "module_name": "UiPlugin",
+    "version": "6.2.0",
+    "built_with": {
+        "compiler_id": "GNU",
+        "compiler_target": "",
+        "compiler_version": "10.2.1",
+        "cross_compiled": false,
+        "target_system": "Linux"
+    }
+}
