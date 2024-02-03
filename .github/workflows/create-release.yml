@@ -1,0 +1,37 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-release:
+    runs-on: windows-2022
+    steps:
+    - uses: actions/checkout@v3.6.0
+      with:
+        repository: "stenzek/duckstation"
+        fetch-depth: 0
+
+    - name: Build X64 Dependencies
+      run: scripts/build-dependencies-windows-x64.bat
+
+    #- name: Build ARM64 Dependencies
+    #  run: scripts/build-dependencies-windows-arm64.bat
+
+    - name: Create Dependencies Archive
+      shell: cmd
+      run: |
+        cd deps\msvc
+        "C:\Program Files\7-Zip\7z.exe" a ..\..\deps-x64.7z .\deps-x64
+        rem "C:\Program Files\7-Zip\7z.exe" a ..\..\deps-arm64.7z .\deps-arm64
+
+    - name: Create Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Latest Dependencies Build"
+        files: |
+          deps-x64.7z
+          #deps-arm64.7z
