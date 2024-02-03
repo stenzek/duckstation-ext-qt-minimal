@@ -1,0 +1,45 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-release:
+    runs-on: windows-2022
+    steps:
+      # Due to what appears to be MAX_PATH limitations, use a different directory.
+    - name: Clone Repository
+      shell: cmd
+      run: |
+        cd \
+        git clone https://github.com/stenzek/duckstation.git --depth=1
+
+    - name: Build X64 Dependencies
+      shell: cmd
+      run: |
+        cd \duckstation
+        scripts\build-dependencies-windows-x64.bat
+
+    - name: Build ARM64 Dependencies
+      shell: cmd
+      run: |
+        cd \duckstation
+        scripts\build-dependencies-windows-arm64.bat
+
+    - name: Create Dependencies Archive
+      shell: cmd
+      run: |
+        cd \duckstation\dep\msvc
+        "C:\Program Files\7-Zip\7z.exe" a "%GITHUB_WORKSPACE%\deps-x64.7z" .\deps-x64
+        "C:\Program Files\7-Zip\7z.exe" a "%GITHUB_WORKSPACE%\deps-arm64.7z" .\deps-arm64
+
+    - name: Create Release
+      uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: false
+        title: "Latest Dependencies Build"
+        files: |
+          deps-x64.7z
+          deps-arm64.7z
