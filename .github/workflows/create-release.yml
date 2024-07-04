@@ -18,13 +18,13 @@ jobs:
       shell: cmd
       run: |
         cd \duckstation
-        scripts\build-dependencies-windows-x64.bat
+        scripts\deps\build-dependencies-windows-x64.bat
 
     - name: Build ARM64 Dependencies
       shell: cmd
       run: |
         cd \duckstation
-        scripts\build-dependencies-windows-arm64.bat
+        scripts\deps\build-dependencies-windows-arm64.bat
 
     - name: Create Dependencies Archive
       shell: cmd
