@@ -1,0 +1,166 @@
+[
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Singleton",
+                        "value": "true"
+                    },
+                    {
+                        "name": "QML.Element",
+                        "value": "StandardPaths"
+                    },
+                    {
+                        "name": "QML.AddedInVersion",
+                        "value": "1538"
+                    },
+                    {
+                        "name": "QML.Extended",
+                        "value": "QStandardPaths"
+                    }
+                ],
+                "className": "QQmlStandardPaths",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            }
+                        ],
+                        "name": "displayName",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "executableName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "paths",
+                                "type": "QStringList"
+                            }
+                        ],
+                        "name": "findExecutable",
+                        "returnType": "QUrl"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "executableName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "findExecutable",
+                        "returnType": "QUrl"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "options",
+                                "type": "QStandardPaths::LocateOptions"
+                            }
+                        ],
+                        "name": "locate",
+                        "returnType": "QUrl"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "locate",
+                        "returnType": "QUrl"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            },
+                            {
+                                "name": "options",
+                                "type": "QStandardPaths::LocateOptions"
+                            }
+                        ],
+                        "name": "locateAll",
+                        "returnType": "QList<QUrl>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            },
+                            {
+                                "name": "fileName",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "locateAll",
+                        "returnType": "QList<QUrl>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            }
+                        ],
+                        "name": "standardLocations",
+                        "returnType": "QList<QUrl>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "QStandardPaths::StandardLocation"
+                            }
+                        ],
+                        "name": "writableLocation",
+                        "returnType": "QUrl"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "QQmlStandardPaths",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "qqmlstandardpaths_p.h",
+        "outputRevision": 68
+    }
+]
